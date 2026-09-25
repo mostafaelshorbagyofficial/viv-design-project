@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --viv-burgundy-dark: #230308;
+    --viv-burgundy: #4A0E17;
+    --viv-burgundy-rich: #631221;
+    --viv-burgundy-light: #7E192B;
+    --viv-cream: #F9F6F0;
+    --viv-cream-warm: #F3ECE2;
+    --viv-cream-muted: #EBE3D5;
+    --viv-gold: #D8B26E;
+    --viv-gold-light: #E5C384;
+    --viv-gold-muted: #B38E4B;
+    --viv-wood: #2C1E18;
+    --viv-black: #121214;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #120406;
+    color: #F9F6F0;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif-luxury {
+    font-family: 'Playfair Display', 'Cormorant Garamond', 'Amiri', Georgia, serif;
+  }
+
+  .font-arabic-heading {
+    font-family: 'IBM Plex Sans Arabic', 'Amiri', 'Playfair Display', sans-serif;
+  }
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A0509;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4A0E17;
+  border-radius: 3px;
+  border: 1px solid #D8B26E40;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D8B26E;
+}
+
+/* Luxury Grain & Texture Overlay */
+.bg-grain {
+  background-image: radial-gradient(rgba(216, 178, 110, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.gold-glow {
+  box-shadow: 0 0 35px -5px rgba(216, 178, 110, 0.25);
+}
+
+.burgundy-glow {
+  box-shadow: 0 0 40px -10px rgba(74, 14, 23, 0.6);
+}
+
+/* Smooth Image Transitions */
+.editorial-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: #1c060a;
+}
+
+.editorial-img-wrapper img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+}
+
+.editorial-img-wrapper:hover img {
+  transform: scale(1.03);
+}
+
+/* Glassmorphism Luxury Panels */
+.glass-panel-burgundy {
+  background: rgba(35, 3, 8, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(216, 178, 110, 0.18);
+}
+
+.glass-panel-cream {
+  background: rgba(249, 246, 240, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(74, 14, 23, 0.15);
+}
+
+/* Keyframe animations */
+@keyframes subtlePulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+}
+
+.animate-subtle-pulse {
+  animation: subtlePulse 4s ease-in-out infinite;
+}

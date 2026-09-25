@@ -12,9 +12,6 @@ dist
 dist-ssr
 *.local
 
-# Large video assets (>100MB GitHub limit)
-public/assets/viv-opening-film.mp4
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
